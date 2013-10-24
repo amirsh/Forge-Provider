@@ -6,5 +6,5 @@ package object library {
   type ForgeArray[T] = scala.Array[T]
   type ForgeArrayBuffer[T] = scala.collection.mutable.ArrayBuffer[T]
 
-  implicit def toForgeAny[T](obj: T): ForgeAny[T] = new ForgeAny(obj)
+  implicit def toForgeExtras[T](obj: T): ForgeExtras[T] = new ForgeExtras(obj)
 }
