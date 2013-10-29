@@ -2,7 +2,7 @@ package ch.epfl
 package lamp
 package autolifter
 
-package object library {
+package object library extends FractionalImplicits {
   type ForgeArray[T] = scala.Array[T]
   type ForgeArrayBuffer[T] = scala.collection.mutable.ArrayBuffer[T]
 
