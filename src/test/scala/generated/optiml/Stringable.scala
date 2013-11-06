@@ -119,6 +119,12 @@ object Stringable extends scala.math.Numeric.ExtraImplicits {
     }
   }
 
+  implicit def canStringableVector[T: Stringable: Manifest]: Stringable[Vector[T]] = new Stringable[Vector[T]] {
+    def makeStr(__arg0: Vector[T]) = {
+      __arg0.makeString
+    }
+  }
+
   implicit def canStringableInt: Stringable[Int] = new Stringable[Int] {
     def makeStr(__arg0: Int) = {
       "" + __arg0
