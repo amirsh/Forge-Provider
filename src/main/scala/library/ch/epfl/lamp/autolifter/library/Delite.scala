@@ -27,3 +27,4 @@ object Delite {
 trait DeliteCollection[T] extends ForgeAny
 
 trait ParallelCollectionBuffer[T] extends DeliteCollection[T]
+trait ParallelCollection[T] extends DeliteCollection[T]
