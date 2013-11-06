@@ -75,14 +75,6 @@ object Table {
     array_copy(src, __arg1, dest, __arg3, __arg4)
   })
 
-  protected def upgradeInt[R: Manifest](value: Int): R = value.asInstanceOf[R]
-
-  protected def groupByHackImpl[K: Manifest, V: Manifest](self: Table[V], keySelector: V => K): Table[Tuple2[K, Table[V]]] = {
-    throw new RuntimeException("groupBy not implemented")
-  }
-
-  protected def zeroType[T: Manifest]: T = null.asInstanceOf[T]
-
 }
 
 class Table[A: Manifest](__size: Int, __data: ForgeArray[A]) extends ParallelCollectionBuffer[A] { self =>
